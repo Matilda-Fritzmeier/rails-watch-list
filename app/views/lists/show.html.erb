@@ -1,6 +1,7 @@
 <h2><%= @list.name %></h2>
 
 <p><strong>Bookmarks</strong></p>
+  <%= cl_image_tag @list.photo.key, height: 300, width: 400, crop: :fill %>
 <ul class="list-group" >
   <% @list.bookmarks.each do |bookmark| %>
     <li class="list-group-item"><%= bookmark.comment %></li>
